@@ -57,7 +57,7 @@ const Navbar = () => {
           w-[280px] px-2 width-transition`}
       >
         {/* Row container */}
-        <div className="flex items-center gap-4 h-16 pl-1">
+        <div className="flex items-center justify-around  h-16">
           {/* Avatar - clickable on large screens when scrolled */}
           <div
             className={`flex items-center justify-center w-10 h-9 object-cover rounded-full overflow-hidden shrink-0 `}
@@ -89,16 +89,15 @@ const Navbar = () => {
           </AnimatePresence>
 
           {/* Desktop full nav - visible only at xl breakpoint and when not scrolled or expanded */}
-          <div className="hidden xl:flex items-center justify-between w-full">
+          <div className="hidden xl:flex">
             <AnimatePresence mode="wait">
               {(isNavVisible || expanded) && (
-                <motion.div className="flex items-center gap-4 text-sm tracking-wide font-medium">
+                <motion.div className="flex items-center gap-8 text-md w-full tracking-wide font-medium">
                   {[
                     ["Home", "#home"],
                     ["skills", "#skills"],
                     ["About", "#about"],
                     ["Projects", "#projects"],
-                    ["contact", "#contact"],
                   ].map(([label, href], i) => {
                     return (
                       <div
@@ -139,7 +138,7 @@ const Navbar = () => {
             </AnimatePresence>
 
             {/* Contact button - always visible */}
-            <AnimatePresence mode="wait">
+            {/* <AnimatePresence mode="wait">
               {(!scrolled || expanded) && (
                 <motion.button
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -153,7 +152,7 @@ const Navbar = () => {
                   Contact
                 </motion.button>
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </div>
 
           {/* Mobile nav - hidden at xl breakpoint */}
@@ -189,7 +188,7 @@ const Navbar = () => {
                 aria-expanded={menuOpen}
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMenuOpen((o) => !o)}
-                className="w-10 h-10 rounded-full bg-lime-300 text-black font-semibold flex items-center justify-center shadow-inner shadow-lime-200/40 hover:bg-lime-200 transition-colors relative"
+                className="cursor-pointer w-10 h-10 rounded-full bg-lime-300 text-black font-semibold flex items-center justify-center shadow-inner shadow-lime-200/40 hover:bg-lime-200 transition-colors relative"
               >
                 <AnimatePresence mode="crossfade" initial={false}>
                   {menuOpen ? (
@@ -251,7 +250,6 @@ const Navbar = () => {
                     ["skills", "#skills"],
                     ["About", "#about"],
                     ["Projects", "#projects"],
-                    ["contact", "#contact"],
                   ].map(([label, href], i) => (
                     <motion.a
                       key={href}
@@ -273,8 +271,8 @@ const Navbar = () => {
                     </motion.a>
                   ))}
                 </nav>
-                <div className="flex justify-center mt-2">
-                  <motion.button
+                {/* <div className="flex justify-center mt-2">
+                  <motion.a
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
@@ -285,12 +283,13 @@ const Navbar = () => {
                       stiffness: 500,
                       damping: 30,
                     }}
+                    href="#contact"
                     className="btn-fancy shadow shadow-black/50 px-12 h-10"
                     onClick={() => setMenuOpen(false)}
                   >
                     Contact
-                  </motion.button>
-                </div>
+                  </motion.a>
+                </div> */}
               </div>
             </motion.div>
           )}
