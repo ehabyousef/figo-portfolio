@@ -25,7 +25,7 @@ export default function CenterCard() {
   const rotateX = useTransform(
     scrollY,
     [0, 500, 1000, 1500, 2000],
-    [0, -15, 0, 15, -20]
+    [0, -15, 0, 15, -20],
   );
 
   const rotateZ = useTransform(scrollY, [0, 1000, 2000], [0, 8, 5]);
@@ -34,13 +34,24 @@ export default function CenterCard() {
   const translateX = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, 330]);
   const scale = useTransform(scrollY, [0, 1000, 2000], [1, 1.1, 1.15]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1]); // Keep visible
+
+  // Track scroll position to hide card with display: none
+  const [hideCard, setHideCard] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = scrollY.on("change", (value) => {
+      setHideCard(value > 2000);
+    });
+    return () => unsubscribe();
+  }, [scrollY]);
+
   const transform = useTransform(
     handScroll,
     [0, 1],
     [
       "translateX(-50%) translateZ(20px) rotateX(0deg) rotateY(0deg) scale(1.5)",
       "translateX(-50%) translateZ(30px) rotateX(10deg) rotateY(-10deg) scale(0)",
-    ]
+    ],
   );
 
   // Change how we detect which face to show
@@ -56,6 +67,7 @@ export default function CenterCard() {
   return (
     <motion.div
       ref={cardRef}
+      style={{ display: hideCard ? 'none' : 'flex' }}
       className={`hidden fixed inset-0 lg:flex items-center justify-center pointer-events-none z-30`}
     >
       <motion.div

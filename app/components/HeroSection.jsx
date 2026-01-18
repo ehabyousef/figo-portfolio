@@ -45,19 +45,19 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
       {/* end small screen card  */}
-      <div className="container px-12 xl:px-0 flex flex-col xl:flex-row items-center justify-between xl:justify-around h-screen xl:ml-[6rem]">
+      <div className="container px-12 xl:px-0 flex flex-col xl:flex-row items-center justify-between xl:justify-around h-screen xl:ml-[1rem]">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="text-left xl:mb-[8rem] md:mr-auto xl:mr-0 mt-36 xl:mt-0"
         >
-          <h2 className="text-xl md:text-3xl font-medium text-gray-300 mb-2 tracking-wider uppercase">
-            Duncan Robert
+          <h2 className="text-md md:text-3xl font-medium text-gray-300 mb-2 tracking-wider uppercase">
+            Abdelrahman Khafagy
           </h2>
 
-          <h1 className="text-5xl md:text-6xl lg:text-9xl font-bold text-white mb-6 leading-none">
-            DIGITAL
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-none">
+            Full-Stack
           </h1>
         </motion.div>
         <motion.div
@@ -66,13 +66,13 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left md:ml-auto xl:ml-0 mb-[3rem] lg:mb-[0rem]"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-9xl font-bold text-white mb-6 leading-none">
-            DESIGNER
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-none">
+            Developer
           </h1>
           <p className="text-gray-300 text-lg  mb-8 max-w-md">
-            I'm a US-based digital designer and
+            I'm a Egypt-based Backend Developer
             <br />
-            Framer developer
+            .net Developer
           </p>
         </motion.div>
       </div>

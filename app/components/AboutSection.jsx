@@ -62,7 +62,7 @@ export default function AboutSection() {
                   className="text-4xl md:text-5xl font-bold text-[#d0ff71]"
                   style={{ lineHeight: "1rem" }}
                 >
-                  <Counter from={0} to={12} inView={statsInView} />
+                  <Counter from={0} to={2} inView={statsInView} />
                 </div>
                 <div className="text-sm md:text-base text-gray-400 mt-2">
                   Years of Experience
@@ -73,7 +73,7 @@ export default function AboutSection() {
                   className="text-4xl md:text-5xl font-bold text-[#d0ff71]"
                   style={{ lineHeight: "1rem" }}
                 >
-                  <Counter from={0} to={270} inView={statsInView} />
+                  <Counter from={0} to={20} inView={statsInView} />
                 </div>
                 <div className="text-sm md:text-base text-gray-400 mt-2">
                   Completed Projects
@@ -84,10 +84,10 @@ export default function AboutSection() {
                   className="text-4xl md:text-5xl font-bold text-[#d0ff71]"
                   style={{ lineHeight: "1rem" }}
                 >
-                  <Counter from={0} to={50} suffix="+" inView={statsInView} />
+                  <Counter from={0} to={20} suffix="+" inView={statsInView} />
                 </div>
                 <div className="text-sm md:text-base text-gray-400 mt-2">
-                  Clients on Worldwide
+                  Clients
                 </div>
               </div>
             </motion.div>
@@ -107,7 +107,7 @@ export default function AboutSection() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex justify-start mb-0">
+            {/* <div className="flex justify-start mb-0">
               <Link href="/" className="w-12 h-12 rounded-lg">
                 <FaXTwitter size={30} />
               </Link>
@@ -120,7 +120,7 @@ export default function AboutSection() {
               <Link href="/" className="w-12 h-12 rounded-lg">
                 <PiDribbbleLogoFill size={30} />
               </Link>
-            </div>
+            </div> */}
 
             {/* My Story Button */}
             <div>

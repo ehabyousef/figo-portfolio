@@ -92,12 +92,13 @@ const Navbar = () => {
           <div className="hidden xl:flex items-center justify-between w-full">
             <AnimatePresence mode="wait">
               {(isNavVisible || expanded) && (
-                <motion.div className="flex items-center gap-8 text-sm tracking-wide font-medium">
+                <motion.div className="flex items-center gap-4 text-sm tracking-wide font-medium">
                   {[
                     ["Home", "#home"],
+                    ["skills", "#skills"],
                     ["About", "#about"],
                     ["Projects", "#projects"],
-                    ["Blogs", "#blogs"],
+                    ["contact", "#contact"],
                   ].map(([label, href], i) => {
                     return (
                       <div
@@ -247,9 +248,10 @@ const Navbar = () => {
                 <nav className="flex flex-col items-center text-sm font-medium tracking-wide">
                   {[
                     ["Home", "#home"],
+                    ["skills", "#skills"],
                     ["About", "#about"],
                     ["Projects", "#projects"],
-                    ["Blogs", "#blogs"],
+                    ["contact", "#contact"],
                   ].map(([label, href], i) => (
                     <motion.a
                       key={href}

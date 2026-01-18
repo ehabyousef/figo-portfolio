@@ -16,8 +16,8 @@ const antonio = Antonio({
 });
 
 export const metadata = {
-  title: "ehab yousef",
-  description: "egy-based digital designer and front-end developer",
+  title: "abdelrahman khafagy",
+  description: "egy-based .Net Developer",
   icons: {
     icon: "/favicon.ico",
   },

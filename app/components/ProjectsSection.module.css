@@ -1,0 +1,53 @@
+/* Custom hover effects for project cards */
+.projectCard {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(208, 255, 113, 0.15);
+  border-color: rgba(208, 255, 113, 0.3);
+}
+
+/* Custom button with fill animation */
+.viewButton {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  border: 2px solid var(--green);
+  background: transparent;
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.viewButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  z-index: -1;
+}
+
+.viewButton:hover::before {
+  transform: scaleX(1);
+}
+
+.viewButton:hover {
+  color: #0a0a0a;
+}
+
+.viewButton:active {
+  transform: scale(0.97);
+}

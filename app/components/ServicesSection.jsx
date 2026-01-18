@@ -72,7 +72,7 @@ const ServicesSection = () => {
 
   return (
     <section
-      id="services"
+      id="skills"
       className="h-[85vh] md:min-h-screen flex items-center relative overflow-hidden"
     >
       <div className="container mx-auto px-10 xl:px-52 relative z-10">
